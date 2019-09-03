@@ -1,0 +1,6 @@
+* GENEActiv Reader
+Reader for GENEActiv produced .bin files.
+Returns a structure with startTime, sampFreq  header, acc, and temp.
+Foc efficency the button and light sensors are not read but they could be easily added later if needed.
+Additionally, the time array is not stored instead time can be calculated from start time and sample frequency to reduce the size of the returend structure which can get large for long recording sessions.
+For long files it is suggested to save the returend structure as a .mat wath MATLAB's ~save~  function and load with ~load~ for subsequent runs which is much faster than rereading original bin file.
